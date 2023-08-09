@@ -1,0 +1,33 @@
+----------------- DOC VOCAL -----------------
+1 => apt install sudo
+1 => apt update
+2 => apt upgrade
+4 - apt install mariadb-server
+5 - mysql_secure_installation
+3 => adduser vocal
+4 => cd /home/vocal
+5 => wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/4126-e039c54fd49dd205b4a17600e490f5c3d7aed08d/fx.tar.xz
+6 => apt install xz-utils
+7 => tar xvfJ fx.tar.xz
+8 => apt install git
+9 => git clone https://github.com/citizenfx/cfx-server-data.git server-data
+10 => rm fx.tar.xz
+11 => cd /home/vocal/server-data
+12 => apt install screen
+13 => screen -S vocal (CTRL + A + D)
+14 => screen -x ?????.vocal
+???? => numéro du screen
+15 => puis apres mettre les fichier du vocal PMA-VOICE
+16 => Puis Lancer le server = ./run.sh +exec server.cfg
+17 => Mettre dans le server.cfg du server principale ceci.
+
+## VOICE
+setr voice_useNativeAudio
+setr voice_useSendingRangeOnly "true"
+setr voice_debugMode 1
+setr voice_externalAddress "ip du vps ou se situe la vocal"
+setr voice_externalPort "port du vps ou se situe la vocal"
+
+18 => C'est fini 
+
+By Yanis

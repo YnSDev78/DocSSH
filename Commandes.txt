@@ -1,0 +1,72 @@
+apt install sudo
+
+apt update
+
+apt upgrade
+
+apt install mysql-client mysql-server
+
+apt install phpmyadmin
+
+adduser fivem
+
+cd /home/fivem
+
+https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/
+
+wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/5848-4f71128ee48b07026d6d7229a60ebc5f40f2b9db/fx.tar.xz
+
+apt install xz-utils
+
+tar xvfJ fx.tar.xz
+
+apt install git
+
+scp -r /home/powerlife/resources.zip cfx@164.132.21.25:/home/cfx
+
+git clone https://github.com/citizenfx/cfx-server-data.git server-data
+
+rm fx.tar.xz
+
+cd /home/fivem/server-data
+
+bash /home/fivem/run.sh +exec server.cfg
+
+
+-- MYSQL --
+
+Commencer par : =>
+
+mysql
+
+CREATE USER 'fivem'@'localhost' IDENTIFIED BY 'GDUQDTAIDQHSKDHQDYZAGDIADQSIDQUDQI';
+
+
+GRANT ALL PRIVILEGES ON * . * TO 'fivem'@'localhost';
+
+FLUSH PRIVILEGES
+
+
+ -- PHP PROTECT
+
+iptables -t raw -A PREROUTING -p tcp --dport 80 -s ip -j ACCEPT
+iptables -t raw -A PREROUTING -p tcp --dport 80 -s ip -j ACCEPT
+iptables -t raw -A PREROUTING -p tcp --dport 80 -j DROP
+
+Au cas ou
+iptables -t raw -X
+iptables -t raw -F
+
+-- AUGMENTATION FICHIER SQL
+
+https://www.raphaelle-lecot.fr/blog/configurer-phpmyadmin-bases-de-donnees-importantes/
+
+apt install screen
+
+screen -S server
+
+screen -ls
+
+screen -x "?"
+
+screen -x
